@@ -51,7 +51,9 @@ public class DeadLockController {
                 }
             }
         });
+        thread1.setName("DeadLock - thread1");
         thread1.start();
+        thread2.setName("DeadLock - thread2");
         thread2.start();
         return "DeadLock start";
     }
